@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Breathtaking God, Inc.</title>
+  <meta name="description" content="Contact Breathtaking God, Inc. with questions, purchase inquiries or prayer requests at info@breathtakinggod.com." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav">
+      <a class="nav-brand" href="index.html">
+        <img class="nav-logo" src="BreathtakingGodLogo.png" alt="Breathtaking God logo" width="140" height="29" />
+        <span class="nav-title">Breathtaking God, Inc.</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="nav-links" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub"><a href="history.html">About</a><ul class="sub"><li><a href="history.html">History</a></li><li><a href="mission.html">Mission Statement</a></li><li><a href="what.html">What We Do</a></li></ul></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li class="has-sub"><a href="join.html">Join Us</a><ul class="sub"><li><a href="give.html">Give</a></li><li><a href="designate.html">Designate</a></li></ul></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="page-head">
+        <p class="section-label">Contact</p>
+        <h1 class="section-title">We’d love to hear from you</h1>
+        <p class="lead">Questions about the ministry, the Bible study or giving? Send us a note.</p>
+      </div>
+
+      <div class="scripture-block">
+        <div class="card">
+          <form id="contact-form" class="form" novalidate>
+            <div class="field">
+              <label for="c-name">Your name</label>
+              <input id="c-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="c-email">Your email</label>
+              <input id="c-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="c-phone">Phone <span class="hint">— optional</span></label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="c-message">Your message</label>
+              <textarea id="c-message" name="message" required></textarea>
+            </div>
+            <div><button class="btn" type="submit">Send inquiry</button></div>
+            <p class="form-note">This opens your email app with your message ready to send.</p>
+          </form>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Email</h2>
+          <p><a href="mailto:info@breathtakinggod.com?subject=Breathtaking%20God%20Inquiry">info@breathtakinggod.com</a></p>
+          <h2 style="margin-top:1.5rem">Purchases</h2>
+          <p>To pay for <em>He Seeks</em> by check or cash, email us and we’ll arrange it. <a href="store.html#buy">See purchase options</a>.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        &copy; 2026 Breathtaking God, Inc. All rights reserved.<br />
+        <a href="mailto:info@breathtakinggod.com">info@breathtakinggod.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="history.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var d = new FormData(form);
+        var body = 'Name: ' + d.get('name') + '\n' +
+                   'Email: ' + d.get('email') + '\n' +
+                   (d.get('phone') ? 'Phone: ' + d.get('phone') + '\n' : '') +
+                   '\n' + d.get('message');
+        window.location.href = 'mailto:info@breathtakinggod.com?subject=' +
+          encodeURIComponent('Breathtaking God Inquiry') + '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

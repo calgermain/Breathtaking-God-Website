@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Give – Breathtaking God, Inc.</title>
+  <meta name="description" content="Give a gift to Breathtaking God, Inc. securely through PayPal and help meet the needs of this growing ministry." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav">
+      <a class="nav-brand" href="index.html">
+        <img class="nav-logo" src="BreathtakingGodLogo.png" alt="Breathtaking God logo" width="140" height="29" />
+        <span class="nav-title">Breathtaking God, Inc.</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="nav-links" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub"><a href="history.html">About</a><ul class="sub"><li><a href="history.html">History</a></li><li><a href="mission.html">Mission Statement</a></li><li><a href="what.html">What We Do</a></li></ul></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li class="has-sub is-active"><a href="join.html">Join Us</a><ul class="sub"><li><a href="give.html" aria-current="page">Give</a></li><li><a href="designate.html">Designate</a></li></ul></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="section-label">Give</p>
+        <h1 class="section-title">Help meet the needs of this growing ministry</h1>
+        <p class="hero-intro">
+          Praise God for your interest in supporting Breathtaking God, Inc.! Gifts are processed securely by
+          PayPal, and you can use a debit card, credit card or PayPal account.
+        </p>
+        <p class="hero-intro">
+          Planning a larger or future gift? You can also <a href="designate.html">designate Breathtaking God
+          as a beneficiary</a>.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <form class="form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="breathtakinggod@frontier.com" />
+          <input type="hidden" name="item_name" value="Donation to Breathtaking God, Inc." />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="hidden" name="no_shipping" value="1" />
+
+          <div class="field">
+            <label for="amount">Gift amount (USD)</label>
+            <div class="presets" role="group" aria-label="Suggested amounts">
+              <button type="button" data-amount="25">$25</button>
+              <button type="button" data-amount="50">$50</button>
+              <button type="button" data-amount="100">$100</button>
+              <button type="button" data-amount="250">$250</button>
+            </div>
+            <div class="amount-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="amount" name="amount" type="number" min="1" step="0.01" inputmode="decimal" required placeholder="Other amount" />
+            </div>
+          </div>
+
+          <input type="hidden" name="on1" value="Email" />
+          <div class="field">
+            <label for="give-email">Email for updates <span class="hint">— optional, 1–2 times per year</span></label>
+            <input id="give-email" name="os1" type="email" maxlength="200" autocomplete="email" />
+          </div>
+
+          <div><button class="btn" type="submit">Give with PayPal</button></div>
+          <p class="form-note">You’ll finish your gift on PayPal’s secure site in a new tab.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        &copy; 2026 Breathtaking God, Inc. All rights reserved.<br />
+        <a href="mailto:info@breathtakinggod.com">info@breathtakinggod.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="history.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var input = document.getElementById('amount');
+      var btns = document.querySelectorAll('.presets button');
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          input.value = b.dataset.amount;
+          btns.forEach(function (x) { x.classList.toggle('is-on', x === b); });
+        });
+      });
+      input.addEventListener('input', function () {
+        btns.forEach(function (x) { x.classList.toggle('is-on', x.dataset.amount === input.value); });
+      });
+    })();
+  </script>
+</body>
+</html>

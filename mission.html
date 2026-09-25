@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mission Statement – Breathtaking God, Inc.</title>
+  <meta name="description" content="The mission statement of Breathtaking God, Inc.: we believe in the breathtaking God of the Bible, and we speak out to praise Him and honor His word." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav">
+      <a class="nav-brand" href="index.html">
+        <img class="nav-logo" src="BreathtakingGodLogo.png" alt="Breathtaking God logo" width="140" height="29" />
+        <span class="nav-title">Breathtaking God, Inc.</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="nav-links" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub is-active"><a href="history.html">About</a><ul class="sub"><li><a href="history.html">History</a></li><li><a href="mission.html" aria-current="page">Mission Statement</a></li><li><a href="what.html">What We Do</a></li></ul></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li class="has-sub"><a href="join.html">Join Us</a><ul class="sub"><li><a href="give.html">Give</a></li><li><a href="designate.html">Designate</a></li></ul></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="page-head">
+        <p class="section-label">About us</p>
+        <h1 class="section-title">Mission statement</h1>
+      </div>
+
+      <div class="statement">
+        <p>We believe in the breathtaking God of the Bible.</p>
+        <p>We believe God speaks His voice into the heart of all who read His word yearning to truly know Him.</p>
+        <p>Therefore we speak out to the world to praise God and give honor to His great and holy written word.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">We believe</span>
+          <h3>In the God of the Bible</h3>
+          <p>Our work begins with who God is — remarkable, astonishing and worthy of awe.</p>
+        </article>
+        <article class="card">
+          <span class="tag">He speaks</span>
+          <h3>Through His word</h3>
+          <p>God speaks to every heart that reads Scripture yearning to truly know Him.</p>
+        </article>
+        <article class="card">
+          <span class="tag">We speak</span>
+          <h3>To praise and honor Him</h3>
+          <p>Because we believe, we speak out to the world in praise of God and His written word.</p>
+        </article>
+      </div>
+
+      <blockquote class="verse">
+        “It is written: ‘I believed; therefore I have spoken.’ Since we have that same spirit of faith,
+        we also believe and therefore speak.”
+        <cite>2 Corinthians 4:13 (NIV)</cite>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        &copy; 2026 Breathtaking God, Inc. All rights reserved.<br />
+        <a href="mailto:info@breathtakinggod.com">info@breathtakinggod.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="history.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+
+</body>
+</html>

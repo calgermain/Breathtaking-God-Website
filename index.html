@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breathtaking God, Inc.</title>
+  <meta name="description" content="Breathtaking God, Inc. is a ministry founded in 2011 to help hearts slow down, listen for God's voice in Scripture, and respond to His Word." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav">
+      <a class="nav-brand" href="index.html">
+        <img class="nav-logo" src="BreathtakingGodLogo.png" alt="Breathtaking God logo" width="140" height="29" />
+        <span class="nav-title">Breathtaking God, Inc.</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="nav-links" aria-label="Main">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li class="has-sub"><a href="history.html">About</a><ul class="sub"><li><a href="history.html">History</a></li><li><a href="mission.html">Mission Statement</a></li><li><a href="what.html">What We Do</a></li></ul></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li class="has-sub"><a href="join.html">Join Us</a><ul class="sub"><li><a href="give.html">Give</a></li><li><a href="designate.html">Designate</a></li></ul></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="section-label">Welcome</p>
+        <h1 class="section-title">Rejoice! He who created the heavens and earth has given His word for us to read.</h1>
+
+        <p class="hero-intro">
+          The Bible presents such incredible wisdom and knowledge that robotic reading of the word robs
+          the reader of its delicate and breathtaking moments. To read the Bible quickly fails to honor
+          the emotion stirred in one’s heart when pondering upon it.
+        </p>
+        <p class="hero-intro">
+          Such joy is given to the one who hears the voice of God in the pages of Scripture and allows it
+          to permeate his soul.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="store.html">Get the Bible study</a>
+          <a class="btn btn-ghost" href="mission.html">Our mission</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>Our foundation</h2>
+        <p>Breathtaking God, Inc. was founded in the spring of 2011 on a simple but profound call:</p>
+        <blockquote class="verse">
+          “…That you may love the LORD your God, listen to His voice and hold fast to Him.”
+          <cite>Deuteronomy 30:20 (NIV)</cite>
+        </blockquote>
+      </aside>
+    </section>
+
+    <section aria-labelledby="explore-title">
+      <p class="section-label">Explore</p>
+      <h2 class="section-title" id="explore-title">Get to know the ministry</h2>
+
+      <div class="grid grid-4">
+        <a class="card" href="history.html">
+          <h3>Our history</h3>
+          <p>Why we chose the name “Breathtaking God” and the verse we were founded on.</p>
+          <span class="more">Read our story →</span>
+        </a>
+        <a class="card" href="what.html">
+          <h3>What we do</h3>
+          <p>The commitments we build on, plus our written work and past events.</p>
+          <span class="more">See our work →</span>
+        </a>
+        <a class="card" href="video.html">
+          <h3>Watch</h3>
+          <p>Messages, music and a trailer from Breathtaking God, Inc.</p>
+          <span class="more">Watch videos →</span>
+        </a>
+        <a class="card" href="join.html">
+          <h3>Join us</h3>
+          <p>Support this growing ministry with a gift or by naming it as a beneficiary.</p>
+          <span class="more">Ways to help →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        &copy; 2026 Breathtaking God, Inc. All rights reserved.<br />
+        <a href="mailto:info@breathtakinggod.com">info@breathtakinggod.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="history.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+
+</body>
+</html>
